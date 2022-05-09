@@ -21,15 +21,20 @@ results.classList.add('results');
 bod.appendChild(results);
 
 const resetbtn = document.createElement('button');
-resetbtn.classList.add('button');
-resetbtn.textContent = 'Play Again';
+resetbtn.classList.add('resetbtn');
+//resetbtn.textContent = 'Play Again';
 resetbtn.style.visibility = 'hidden';
 resetbtn.addEventListener('click', () => reset())
 bod.appendChild(resetbtn);
 
+const image = document.createElement('img');
+image.src = 'images/replaybutton.png';
+resetbtn.appendChild(image);
+
 function reset() {
     window.location.reload();
 }
+
 const computerChoice = ['Rock', 'Paper', 'Scissors'];
 
 for(let i = 0; i < computerChoice.length; i++) {
@@ -40,10 +45,6 @@ for(let i = 0; i < computerChoice.length; i++) {
     btn.addEventListener('click', () => decide(btn.textContent, computerChoice));
     content.append(btn);
 }
-
-// Fix it so welcome.textContent = ' ' when player decides to play.
-// Fix so when playerCounter = 5 || computerCounter = 5 'Play again' button is displayed
-// and when < 5 it is invisible and to the middle of the screen
 
 function decide(player, computer) {
     welcome.textContent = ' ';

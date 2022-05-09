@@ -2,9 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: black;
     gap: 10px;
-    background-color: black;
+    background: url('images/rps.jpg');
 }
 
 .content {
@@ -19,4 +19,14 @@ body {
     color: white;
     border-color: #c4141b;
     padding: 10px;
+}
+
+.resetbtn {
+    background: none;
+    border: none;
+}
+
+.resetbtn img{
+    height: 2em;
+    width: 2em;
 }
